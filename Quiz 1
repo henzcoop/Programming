@@ -1,1 +1,50 @@
 #Quiz 1, R programming
+#Question 4
+#If I execute the expression x <- 4L in R, what is the class of the object `x' as determined by the `class()' function?
+
+#Question 5
+#What is the class of the object defined by x <- c(4, TRUE)?
+
+#Question 5
+#If I have two vectors x <- c(1,3, 5) and y <- c(3, 2, 10), what is produced by the expression cbind(x, y)?
+
+#Question 8
+#Suppose I have a list defined as x <- list(2, "a", "b", TRUE). What does x[[1]] give me?
+
+#Question 9
+#Suppose I have a vector x <- 1:4 and a vector y <- 2. What is produced by the expression x + y?
+
+#Question 10
+#Suppose I have a vector x <- c(17, 14, 4, 5, 13, 12, 10) and I want to set all 
+#elements of this vector that are greater than 10 to be equal to 4. What R code achieves this?
+
+#Question 11
+#In the dataset provided for this Quiz, what are the column names of the dataset?
+
+#Question 12
+#Extract the first 2 rows of the data frame and print them to the console. What does the output look like?
+
+#Question 13
+#How many observations (i.e. rows) are in this data frame?
+
+#Question 14
+#How many observations (i.e. rows) are in this data frame?
+
+#Question 15
+#What is the value of Ozone in the 47th row?
+
+#Q16
+#What is the value of Ozone in the 47th row?
+
+#Q17
+#What is the mean of the Ozone column in this dataset? Exclude missing values (coded as NA) from this calculation?
+
+#Q18
+#Extract the subset of rows of the data frame where Ozone values are above 31 and Temp values are above 90. 
+#What is the mean of Solar.R in this subset?
+
+#Q19
+#What is the mean of "Temp" when "Month" is equal to 6? 
+
+#Q20
+#What was the maximum ozone value in the month of May (i.e. Month = 5)?
