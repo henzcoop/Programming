@@ -1,4 +1,4 @@
-#Quiz 2, R programming, programming questions only
+#Worksheet 2, programming questions only
 #Q1 Suppose I define the following function in R
 #cube <- function(x, n) {
 #       x^3
