@@ -1,1 +1,1 @@
-This is a repository for the work done for the R programming course through Coursera.
+This is a repository for rudimentary programming exercises.
