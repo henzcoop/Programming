@@ -1,50 +1,102 @@
 #Quiz 1, R programming
 #Question 4
 #If I execute the expression x <- 4L in R, what is the class of the object `x' as determined by the `class()' function?
+> x <- 4L
+> class(x)
+[1] "integer"
 
 #Question 5
 #What is the class of the object defined by x <- c(4, TRUE)?
+> x <- c(4, TRUE)
+> class(x)
+[1] "numeric"
 
 #Question 5
 #If I have two vectors x <- c(1,3, 5) and y <- c(3, 2, 10), what is produced by the expression cbind(x, y)?
+> x <- c(1,3, 5)
+> y <- c(3, 2, 10)
+> cbind(x, y)
+     x  y
+[1,] 1  3
+[2,] 3  2
+[3,] 5 10
 
 #Question 8
 #Suppose I have a list defined as x <- list(2, "a", "b", TRUE). What does x[[1]] give me?
+> x <- list(2, "a", "b", TRUE)
+> x[[1]]
 
 #Question 9
 #Suppose I have a vector x <- 1:4 and a vector y <- 2. What is produced by the expression x + y?
+> x <- 1:4
+> y <- 2
+> x + y
+[1] 3 4 5 6
 
 #Question 10
 #Suppose I have a vector x <- c(17, 14, 4, 5, 13, 12, 10) and I want to set all 
 #elements of this vector that are greater than 10 to be equal to 4. What R code achieves this?
+> x <- c(17, 14, 4, 5, 13, 12, 10)
+> x[x >= 10] <- 4
+> x
+[1] 4 4 4 5 4 4 4
 
 #Question 11
 #In the dataset provided for this Quiz, what are the column names of the dataset?
+> mydata<-read.csv("/Users/jamiehenzy/Desktop/hw1_data.csv")
+> colnames(mydata)
+[1] "Ozone"   "Solar.R" "Wind"    "Temp"    "Month"   "Day"
 
 #Question 12
 #Extract the first 2 rows of the data frame and print them to the console. What does the output look like?
+> head(mydata, n=2)
+  Ozone Solar.R Wind Temp Month Day
+1    41     190  7.4   67     5   1
+2    36     118  8.0   72     5   2
 
 #Question 13
 #How many observations (i.e. rows) are in this data frame?
+> y<-rownames(mydata)
+> length(y)
+[1] 153
 
 #Question 14
-#How many observations (i.e. rows) are in this data frame?
+#Extract the last 2 rows of the data frame and print them to the console. What does the output look like?
+> mydata[152:153,]
+    Ozone Solar.R Wind Temp Month Day
+152    18     131  8.0   76     9  29
+153    20     223 11.5   68     9  30
 
 #Question 15
 #What is the value of Ozone in the 47th row?
+> mydata[47,1]
+[1] 21
 
 #Q16
-#What is the value of Ozone in the 47th row?
+#How many missing values are in the Ozone column of this data frame?
+> length(which(is.na(mydata$Ozone)))
+[1] 37
 
 #Q17
 #What is the mean of the Ozone column in this dataset? Exclude missing values (coded as NA) from this calculation?
+> mean(mydata$Ozone, na.rm=T)
+[1] 42.12931
 
 #Q18
 #Extract the subset of rows of the data frame where Ozone values are above 31 and Temp values are above 90. 
 #What is the mean of Solar.R in this subset?
+> y<-mydata[c(mydata$Ozone>31 & mydata$Temp>90),]
+> mean(y$Solar.R, na.rm=T)
+[1] 212.8
 
 #Q19
 #What is the mean of "Temp" when "Month" is equal to 6? 
+> y<-mydata[mydata$Month==6,]
+> mean(y$Temp)
+[1] 79.1
 
 #Q20
 #What was the maximum ozone value in the month of May (i.e. Month = 5)?
+> y<-mydata[mydata$Month==5,]
+> max(y$Ozone, na.rm=T)
+[1] 115
