@@ -1,1 +1,18 @@
 #Worksheet 3
+#Q1 In this dataset, what is the mean of 'Sepal.Length' for the species virginica? 
+> y<-iris[iris$Species=="virginica",]
+> mean(y$Sepal.Length, na.rm=T)
+[1] 
+
+#Q2 Continuing with the dataset from the previous Question, 
+#what R code returns a vector of the means of the variables 'Sepal.Length', 'Sepal.Width', 
+#'Petal.Length', and 'Petal.Width'?
+> apply(iris[,1:4],2,mean)
+Sepal.Length  Sepal.Width Petal.Length  Petal.Width 
+    5.843333     3.057333     3.758000     1.199333
+    
+#Q3 How can one calculate the average miles per gallon (mpg) by number of cylinders in the car (cyl)?
+
+> with(mtcars, tapply(mpg, cyl, mean))
+       4        6        8 
+26.66364 19.74286 15.10000 
