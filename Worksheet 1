@@ -1,4 +1,4 @@
-#Quiz 1, R programming
+#Worksheet 1
 #Question 4
 #If I execute the expression x <- 4L in R, what is the class of the object `x' as determined by the `class()' function?
 > x <- 4L
