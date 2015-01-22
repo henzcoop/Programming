@@ -3,7 +3,6 @@
 #cube <- function(x, n) {
 #       x^3
 #}
-
 #What is the result of running
 #cube(3)
 #in R after defining this function?
@@ -12,6 +11,15 @@
 + }
 > cube(3)
 [1] 27
+
+#Q2 Why does the following code produce a warning?
+x <- 1:10
+if(x > 5) {
+        x <- 0
+}
+Warning message:
+In if (x > 5) { :
+  the condition has length > 1 and only the first element will be used
 
 #Q3 Consider the following function
 #f <- function(x) {
@@ -26,15 +34,16 @@
 #z <- 10
 #f(3)
 #What value is returned?
-> f<-function(x){
-+    g<-function(y){
-+ y+z
-+ }
-+ x+g(x)
+> f <- function(x) {
++         g <- function(y) {
++                 y + z
++         }
++         z <- 4
++         x + g(x)
 + }
 > z<-10
 > f(3)
-[1] 16
+[1] 10
 
 #Q4 Consider the following expression:
 #x <- 5
