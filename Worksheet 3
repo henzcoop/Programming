@@ -16,3 +16,11 @@ Sepal.Length  Sepal.Width Petal.Length  Petal.Width
 > with(mtcars, tapply(mpg, cyl, mean))
        4        6        8 
 26.66364 19.74286 15.10000 
+
+#Q4 Continuing with the dataset from the previous question, 
+#what is the absolute difference between the average horsepower of 4-cylinder cars 
+#and the average horsepower of 8-cylinder cars?
+> x<-mtcars[mtcars$cyl=="4",]
+> y<-mtcars[mtcars$cyl=="8",]
+> abs(mean(x$hp) - mean(y$hp))
+[1] 126.5779
